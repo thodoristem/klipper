@@ -1164,6 +1164,8 @@ class MCU:
             self.estimated_print_time = dummy_estimated_print_time
     def get_name(self):
         return self._name
+    def register_response(self, cb, msg, oid=None):
+        self._serial.register_response(cb, msg, oid)
     def get_printer(self):
         return self._printer
     def is_fileoutput(self):
